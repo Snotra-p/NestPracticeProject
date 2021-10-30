@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+       app:
+              container_name: "nestjs"
+              build:
+                     context: .
+                     dockerfile: ./nodeBoardDockerfiles
+              ports:
+                     - "3000:3000"
+              volumes:
+                     - ./:/usr/src/app
+
